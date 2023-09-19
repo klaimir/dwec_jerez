@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ15</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ15
+      Crear un programa que reciba los el nombre y las calificaciones de 3 personas. 
+      Para cada persona deberá guardar la información en una tupla. 
+      El programa no mostrará resultados de salida.
+  		*/
+
+  	var notas = new Array();
+        
+    for(i=0; i<3; i++) {
+      var nombre = prompt("Nombre de la persona " + (i+1));
+      var nota = prompt("Nota de la persona " + (i+1));
+       notas[i] = {"nombre":nombre, "nota":nota}; 
+    }
+      
+  </script>
+  </body>
+</html>

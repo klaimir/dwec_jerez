@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ10</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ10
+      Crear un programa que reciba un número del 1 al 7 y muestre el nombre de la película StarWars correspondiente.
+
+  		*/
+  	   var episodio = prompt("Dame el número del episodio para decirte el nombre:");
+       switch(episodio){
+            case '1': case 'I':  
+                alert("La amenaza fantasma");
+                break;
+            case '2': case 'II':
+                alert("El ataque de los clones");
+                break;
+            case '3': case 'III':
+                alert("La venganza de los Sith");
+                break;
+            case '4': case 'IV':
+                alert("Una nueva esperanza");
+                break;
+            case '5': case 'V':
+                alert("El imperio contraataca");
+                break;
+            case '6': case 'VI':
+                alert("El retorno del jedi");
+                break;
+            case '7': case 'VII':
+                alert("El despertar de la fuerza");
+                break;
+            default:
+                alert("Esa no existe, padawan.");
+        }
+  </script>
+  </body>
+</html>

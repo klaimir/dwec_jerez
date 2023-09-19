@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ16</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ16
+      Crear un programa que contenga una Lista de nombres. 
+      Solicitar un índice de la lista y mostrar el valor del índice. 
+      El programa deberá validar que el índice es válido.
+
+  		*/
+  	    var nombres = ["Juan", "Pepe","Pedro","Luis", "Antonio"];
+        var indice = prompt("Indie del nombre a mostrar:");
+        
+        if(indice<0 || indice>4){
+          alert("No encontré nada en ese índice"); 
+        }else{
+          alert(nombres[indice]);
+        }
+       
+  </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ19</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*KC_EJ19
+      Crear un programa que almacene 10 números dados por el usuario y muestre únicamente los pares.
+  		*/
+      var mensaje = "Son pares: "
+        for(i=0; i<10; i++) {
+            var valor = parseInt(prompt("Dame un número (" + (i+1)+ "):"));
+            if(valor % 2 == 0) {
+                mensaje += valor + ", "
+            }
+        }
+
+        alert(mensaje.slice(0, -2));
+        
+        //opción: Crear un arrego y meter los pares con push()
+
+  </script>
+  </body>
+</html>

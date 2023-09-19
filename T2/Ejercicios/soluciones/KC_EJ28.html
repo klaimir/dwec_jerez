@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ28</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ28
+      Crear un programa que contenga una función pintar_rectangulo(lado, figura). 
+      Esta función deberá pintar en la página un cuadrilátero de lado x lado con la figura proporcionada.
+
+  		*/
+
+            function pintarRectangulo(lado, figura) {
+
+                for (i=0; i <lado; i++){
+                    for(j=0; j<lado ; j++){
+                        if (i === 0 || i === lado-1 || j === 0 || j === lado-1){
+                            document.write(figura);
+                        }else{
+                            document.write("&nbsp;&nbsp;");
+                        }
+                    }
+                    document.write ("<br/>");
+                }    
+            } 
+
+            var lado = parseInt(prompt("Introduzce el lado: "));    
+            var figura = prompt("Introduce la figura");
+
+            pintarRectangulo(lado, figura);
+  </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS_EJ01</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ07
+      Crea un programa que solicite tres notas y calcule su media. Dependiendo del valor de la media, mostrará si el resultado es Apto o No Apto.
+  		*/
+
+  	 var nota1= parseInt(prompt("Introduce la primera nota:"));
+     var nota2 = parseInt(prompt("Introduce la segunda nota:"));
+     var nota3 = parseInt(prompt("Introduce la tercera nota:"));
+     var media = ((nota1 + nota2 + nota3) / 3);
+
+     if(media < 5){
+        alert("NO APTO");
+      }else{
+        alert("APTO");
+      }
+  </script>
+  </body>
+</html>

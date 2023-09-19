@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ02</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+    		/*
+    			KC_EJ02
+          Crea un programa que solicite dos números y muestre los resultados de todas sus operaciones aritméticas. 
+    		*/
+  	    var num1 = parseInt(prompt("Dame un número"));
+        var num2 = parseInt(prompt("Dame otro número"));
+
+        var suma = num1 + num2;
+        var resta = num1 - num2;
+        var multiplicacion = num1 * num2;
+        var division = Math.round((num1 / num2));
+        var potencia = Math.pow(num1,num2);
+        var modulo = num1 % num2;
+
+        document.write(num1 + " + " + num2 + " = " + suma + "<br>");
+        document.write(num1 + " - " + num2 + " = " + resta + "<br>");
+        document.write(num1 + " * " + num2 + " = " + multiplicacion + "<br>");
+        document.write(num1 + " / " + num2 + " = " + division + "<br>");
+        document.write(num1 + " ** " + num2 + " = " + potencia + "<br>");
+        document.write(num1 + " % " + num2 + " = " + modulo + "<br>");
+  </script>
+  </body>
+</html>

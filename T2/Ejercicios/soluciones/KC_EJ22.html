@@ -1,0 +1,30 @@
+|<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ22</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ22
+      Crear un programa que reciba los nombres y edades de 10 personas. 
+      Mostrar únicamente los nombres de las personas que tienen derecho a votar (mayores a 18 años).
+
+  		*/
+      var mensaje = "Tienen derecho al voto: \n";
+        for(i=0; i<10; i++) {
+            var nombre = prompt("Introduce el nombre de la persona número " + (i+1) + ":");
+            var edad = parseInt(prompt("Introduce la edad de la persona número " + (i+1) + ":"));
+            if( edad >= 18){
+              mensaje += nombre + " ( de " + edad +" años)"+ "\n";
+            }
+        }
+
+        alert(mensaje);
+        
+  </script>
+  </body>
+</html>

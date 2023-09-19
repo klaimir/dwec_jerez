@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ13</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ13
+      Crear un programa que contenga una lista de 20 números y muestre un rango de la lista. 
+      El inicio y fin del rango serán introducidos por el usuario y el programa deberá validar que sean valores válidos.
+  		*/
+
+  	  var numeros = new Array();
+      for (i=0; i<20; i++) {
+        numeros[i] = i+1;   
+      }
+        
+      var inicio = parseInt(prompt("Mostrar desde:"));
+      var fin = parseInt(prompt("Hasta:"));
+  
+      if(inicio<fin && (inicio>=1 && inicio<=20) && (fin>=1 && fin<=20)){
+        var rango = numeros.slice(inicio, fin);
+        alert(rango);
+      }else{
+        alert("Verifica que el rango sea de 1 a 20 y que el primer número sea menor que el segundo.");
+      }
+  </script>
+  </body>
+</html>

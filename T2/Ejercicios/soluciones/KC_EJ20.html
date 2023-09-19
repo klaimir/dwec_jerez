@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ20</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ20
+      Crear un programa que escriba la suma de los números del 1 a N, donde N será dado por el usuario.
+  		*/
+  	 var n = parseInt(prompt("Dame el número para mostrar su suma acumulada:"));
+        var acumulado = 0;
+        var mensaje = "";
+        for(i = 1; i <= n; i++) {
+            acumulado += i;
+            mensaje += i + " + ";
+        }
+        mensaje = mensaje.slice(0, -3);
+        mensaje += " = " + acumulado;
+        alert(mensaje);
+  </script>
+  </body>
+</html>

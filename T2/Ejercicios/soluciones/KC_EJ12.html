@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ12</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ12
+Crear un programa que reciba una letra e indique si es vocal o consonante.
+
+  		*/
+  	    var letra = prompt("Introduce una letra:");
+       
+        if(letra.toUpperCase() === 'A' || 
+          letra.toUpperCase() === 'E' || 
+          letra.toUpperCase() === 'I' || 
+          letra.toUpperCase() === 'O' || 
+          letra.toUpperCase() === 'U') {
+            alert(letra + " es una vocal.");
+        }else{
+          if(isNaN(letra)){
+            alert(letra + " es una consonante.");
+          }else{
+            alert("Esa no es una letra");
+          }
+        }
+        
+  </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ08</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ08
+      Crear un programa que reciba un número entero y muestre si es par o impar, positivo o negativo, o cero.
+  		*/
+
+  	 var n= parseInt(prompt("Introduce un número:"));
+
+     var mensaje = "Número "
+
+    if(n>= 0) {
+      mensaje += "positivo"
+      if(n % 2 === 0){
+        mensaje += " y par";
+      }else{
+        mensaje += " e impar";
+      }
+    }else{
+      mensaje += "negativo"
+      if(n % 2 === 0){
+         mensaje += " y par";
+      }else{
+          mensaje += " e impar";
+      }
+    }
+
+    alert(mensaje)
+  
+  </script>
+  </body>
+</html>

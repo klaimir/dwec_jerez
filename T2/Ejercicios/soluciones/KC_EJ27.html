@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ27</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ27
+      Crear un programa que contenga una función esPalindromo(texto) y determine si dicho texto es un palíndromo.
+  		*/
+
+        function esPalindromo(textoIntroducido){
+
+            txtSinEspacios = textoIntroducido.replace(/\s/g, "");
+            lista = txtSinEspacios.split("");
+            listaInversa = txtSinEspacios.split("");
+            listaInversa.reverse();
+            
+          
+            if(lista.toString() == listaInversa.toString()) {
+                alert("Es palíndromo.");
+            }else {
+                alert("No es palíndromo.");
+            }
+         }
+         
+         var textoIntroducido = prompt("Introduce un texto: ").toLowerCase();
+         esPalindromo(textoIntroducido)
+         
+
+  </script>
+  </body>
+</html>

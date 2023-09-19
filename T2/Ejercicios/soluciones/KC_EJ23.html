@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ23</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			Crear un programa que reciba los el nombre y las calificaciones de N personas, mientras que el usuario no escriba “terminar”. 
+      Al terminar deberá mostrar la media de calificaciones de cada persona.
+
+  		*/
+  	 
+      var opcion=""
+      var personas = new Array();
+
+      while(true){
+        var nombre = prompt("Dame el nombre de la persona a agregar ('terminar' para finalizar): ");
+        if(nombre.toLowerCase() === "terminar"){
+          break;
+        }
+        var media = 0;
+        for(i = 0; i <3; i++){
+          media += parseInt(prompt("Dame la calificacion " + i + " de " + nombre));
+        }
+        media = media /3;
+        personas.push({"nombre":nombre, "media":media});
+      }
+
+      for(i = 0; i <3; i++){
+         document.write(personas[i].nombre + " - " +personas[i].media + "<br/>");
+        }
+
+  </script>
+  </body>
+</html>
