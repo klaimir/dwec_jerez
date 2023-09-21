@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de tipos</title>
+</head>
+
+<body>
+    <h1>Ejemplo de tipos</h1>
+</body>
+<script>
+
+    // Manejo de errores
+    suma = (a, b) => {
+        if (typeof a !== "number")
+            throw Error("A no es ningún número");
+
+        if (typeof b !== "number")
+            throw Error("B no es ningún número");
+
+        return a + b;
+    }
+
+    try {
+        console.log(suma(2.19, "hola"));
+    } catch (error) {
+        console.log(error);
+    }
+</script>
+
+</html>

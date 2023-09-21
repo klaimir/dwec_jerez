@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de hoisting</title>
+</head>
+
+<body>
+    <h1>Ejemplo de hoisting</h1>
+</body>
+<script>
+    x = 10; // Con let no se hoistea la variable, con var si
+
+    //console.log(PI); // Da error en tiempo de ejecución
+
+    // let x;
+    var x;
+
+    const PI = 3.14;
+    console.log(suma(1, 2)); // Se hoistea la función
+
+    //console.log(resta(10,5)); // Error en tiempo de ejecución
+
+    resta = () => a - b; // Las llaves son obligatorias con dos o más sentencias
+
+    function suma(a, b) {
+        return a + b;
+    }
+
+    // Manejo de errores
+    division = (a, b) => {
+        if (isNaN(parseInt(a)))
+            throw Error("A no es ningún número");
+
+        if (isNaN(parseInt(b)))
+            throw Error("B no es ningún número");
+
+        if (b === 0)
+            throw Error("No se puede dividir por 0");
+
+        return a / b;
+    }
+
+    try {
+        console.log(division("pepe", "hola"));
+    } catch (error) {
+        console.log(error);
+    }
+</script>
+
+</html>
