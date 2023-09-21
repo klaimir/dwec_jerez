@@ -1,0 +1,10 @@
+- Conversiones
+- Funciones (Arrow Functions)
+- Hoisting
+- DataTypes
+- String and Number Methods
+- Template Literal
+- Best Practises and Mistakes
+- Truly/Falsy
+
+Ejercicios 11,12,14,18,19,20,22,25,26,27
