@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen</title>
+</head>
+
+<body>
+    <h1>Resumen</h1>
+</body>
+<script>
+    // Conversión a entero
+    let numString = "1234";
+    let numInt = parseInt(numString);
+
+    // Conversión a string
+    console.log(numInt.toString());
+
+    // Librerias
+    console.log(Math.PI);
+
+    // Igualdad (no estricto)
+    if(numString == numInt) {
+        console.log("SON IGUALES EN DATO");
+    }
+
+    // Igualdad (estricto)
+    if(numString === numInt) {
+        console.log("SON IGUALES EN DATO Y TIPO");
+    } else {
+        console.log("NO SON IGUALES EN DATO Y TIPO");
+    }
+
+    // Operador ternario
+    numString === numInt ? console.log("SON IGUALES EN DATO Y TIPO") : console.log("NO SON IGUALES EN DATO Y TIPO");
+
+    // Métodos string
+    console.log(numString.charAt(0));
+    console.log(numString.slice(1,2));
+
+    // Template literal
+    console.log(`Mostramos variables dentro del texto así ${numString}
+    y admite saltos de línea`);
+
+    // Truly/Falsy
+    let falsy = null; // Tb vale undefined, 0 o ''
+    falsy ? console.log("MUESTRA VERDADERO") : console.log("MUESTRA FALSO"); 
+
+    
+</script>
+
+</html>

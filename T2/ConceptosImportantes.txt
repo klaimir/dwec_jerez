@@ -2,7 +2,9 @@
 - Funciones (Arrow Functions)
 - Hoisting
 - DataTypes
-- String and Number Methods
+- let, var, const
+- Operadores (ternario y comparadores estrictos)
+- String and Number Methods (mirar en tutorial)
 - Template Literal
 - Best Practises and Mistakes
 - Truly/Falsy

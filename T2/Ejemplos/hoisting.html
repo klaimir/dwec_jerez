@@ -11,6 +11,8 @@
     <h1>Ejemplo de hoisting</h1>
 </body>
 <script>
+    console.log('NO existe X:', x);
+
     x = 10; // Con let no se hoistea la variable, con var si
 
     //console.log(PI); // Da error en tiempo de ejecución
@@ -23,7 +25,7 @@
 
     //console.log(resta(10,5)); // Error en tiempo de ejecución
 
-    resta = () => a - b; // Las llaves son obligatorias con dos o más sentencias
+    resta = (a, b) => a - b; // Las llaves son obligatorias con dos o más sentencias
 
     function suma(a, b) {
         return a + b;
@@ -31,10 +33,10 @@
 
     // Manejo de errores
     division = (a, b) => {
-        if (isNaN(parseInt(a)))
+        if (typeof a !== "number" || isNaN(a))
             throw Error("A no es ningún número");
 
-        if (isNaN(parseInt(b)))
+        if (typeof b !== "number" || isNaN(b))
             throw Error("B no es ningún número");
 
         if (b === 0)
@@ -44,10 +46,12 @@
     }
 
     try {
-        console.log(division("pepe", "hola"));
+        console.log(division(parseInt("Pepe"), "hola"));
     } catch (error) {
         console.log(error);
     }
+
+    console.log(typeof NaN);
 </script>
 
 </html>
