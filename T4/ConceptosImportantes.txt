@@ -1,0 +1,5 @@
+- Callbacks
+- Mutabilidad e inmutabilidad
+- Array Methods
+- Objetos Literales
+- This

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+
+<body>
+    <h1>Ejemplo de objects</h1>
+    <p id="demo"></p>
+</body>
+<script>
+    // Ejemplo inmutabilidad
+    let palabra = "String";
+    let palabra2 = "String2";
+
+    palabra = palabra2;
+    palabra2 = "Otra palabra";
+
+    console.log(palabra);
+    console.log(palabra2);
+
+    // Ejemplo de mutabilidad
+    let array1 = [1, 2, 3];
+    let array2 = [4, 5, 6];
+
+    array1 = array2;
+
+    array2[2] = 10;
+
+    console.log(array1);
+    console.log(array2);
+
+    // Objetos
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50, 
+        eyeColor: "blue",
+        show: function (params) {
+            console.log(`${this.firstName} y edad ${this.age}`);
+        }
+    }
+
+    const x = person;
+    x.age = 10;      // Will change both x.age and person.age
+
+    console.log(person);
+    console.log(x['firstName']);
+
+    for (const key in person) {
+        if (Object.hasOwnProperty.call(person, key)) {
+            const value = person[key];
+            console.log(`${key} = ${value}`);
+        }
+    }
+
+    person.show();
+</script>
+
+</html>
