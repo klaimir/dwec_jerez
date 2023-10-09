@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Arrays</h1>
+</body>
+<script>
+    // Pero lo normal es declararlo const para no sobreescribirlo
+    let personas = [{ dni: "77777771R", nombre: "Pepito", apellidos: "Pérez", edad: 30 },
+    { dni: "77777772R", nombre: "Pepito2", apellidos: "Pérez", edad: 31 },
+    { dni: "77777773R", nombre: "Pepito3", apellidos: "Pérez", edad: 32 }];
+
+    personas.pop();
+    personas.push({ dni: "77777774R", nombre: "Pepito4", apellidos: "Pérez", edad: 33 });
+    /*
+
+    for (let index = 0; index < personas.length; index++) {
+        const element = personas[index];
+        console.log(element);
+    }
+
+    console.log(personas);
+
+    // Filtrado normal
+    const personas2 = personas.filter((element) => {
+        return element.edad > 30;
+    });
+
+    console.log(personas2);
+
+    // Puede servir para eliminar elementos
+    personas = personas.filter((element) => {
+        return element.dni !== "77777771R";
+    });
+
+    console.log(personas);
+
+    // Otro ejemplo de borrado
+    let dni = prompt('Dame un dni');
+
+    // No es la manera habitual
+    const callback = (item => {
+        return item.dni === dni;
+    })
+    let indexDni = personas.findIndex(callback);
+    if(indexDni === -1) {
+        alert("No existe el DNI")
+    } else {
+        personas.splice(indexDni, 1);
+    }
+    console.log(personas);
+
+    // Some y every
+    if(personas.some(function(item) {
+        return item.edad === 31;
+    })) {
+        alert("Hay una persona con edad a 31");
+    }
+
+    if(!personas.every(function(item) {
+        return item.edad === 31;
+    })) {
+        alert("Todas las personas no tienen 31 años");
+    }
+
+    // Map
+    const personasMap =  personas.map(((item, index) => {
+        return {
+            dni: item.dni.substring(0, item.dni.length-2),
+            nombre: item.nombre + " - " + index,
+            edad: item.edad + index,
+        }
+    }));
+
+    console.log(personasMap);
+
+    // Sort
+    personas.push({ dni: "77777774R", nombre: "Ale", apellidos: "Pérez", edad: 15 });
+    console.log(personas.sort((a, b) => a.edad - b.edad));
+
+    console.log(personas.sort((a, b) => a.nombre.localeCompare(b.nombre.localeCompare())));
+
+    // Reduce
+    console.log(personas.reduce((sumEdad, item) => sumEdad + item.edad, 0) / personas.length);
+
+    */
+
+    // Foreach (para visualizar)
+    personas.forEach(element => {
+        console.log(element);
+    });
+
+    forEach(personas, console.log);
+
+    // Foreach (para modificar)
+    personas.forEach(element => {
+        element.edad += 1;
+    });
+
+    function IncrementarEdad(array) {
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            element.edad += 1;
+        }
+    }
+
+    // Función con callback
+    function forEach(array, callback) {
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            callback(element);
+        }
+    }
+
+    for (let index = 0; index < personas.length; index++) {
+        const element = personas[index];
+        console.log(element);
+    }   
+
+    console.log(personas);
+</script>
+
+</html>

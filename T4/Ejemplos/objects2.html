@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+
+<body>
+    <h1>Ejemplo de objects</h1>
+    <p id="demo"></p>
+</body>
+<script>
+
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+        show: function (params) {
+            console.log(`${this.firstName} y edad ${this.age}`);
+        }
+    }
+
+    // JSON.stringify y JSON.parse
+    console.log(JSON.stringify(person));
+
+    const alumnos = [
+        {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        },
+        {
+            firstName: "John2",
+            lastName: "Doe2",
+            age: 15,
+            eyeColor: "yellow"
+        }
+    ];
+
+    console.log(alumnos);
+
+    let alumnosString = JSON.stringify(alumnos)
+    console.log(alumnosString);
+
+    try {
+        var alumnosDeepCopy = JSON.parse(alumnosString);
+        console.log(alumnosDeepCopy);
+    } catch (error) {
+        console.log("Error de parseo");
+    }
+
+    alumnosDeepCopy[0].age += 1;
+
+    console.log(alumnos);
+    console.log(alumnosDeepCopy);
+
+    // Funciones constructoras
+    function Person(first, last, age, eyecolor) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eyecolor;
+        this.name = function () {
+            return this.firstName + " " + this.lastName;
+        };
+    }
+
+    Person.prototype.cocinar = function () {
+        console.log(`La persona ${this.name()} cocina`)
+    }
+
+    const myFather = new Person("John", "Doe", 50, "blue");
+    const myMother = new Person("Sally", "Rally", 48, "green");
+
+    console.log(myFather);
+    console.log(myMother);
+
+    myMother.cocinar();
+</script>
+
+</html>

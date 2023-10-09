@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+
+<body>
+    <h1>Ejemplo de clases</h1>
+    <p id="demo"></p>
+</body>
+<script>
+    class Person {
+
+        // Las variables no se declaran, son públicas por defecto
+        // var firstName
+
+        constructor(first, last, age, eyecolor) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eyecolor;
+        }
+
+        name() {
+            return this.firstName + " " + this.lastName;
+        }
+
+        cocinar() {
+            console.log(`La persona ${this.name()} cocina`)
+        }
+
+    }
+
+    const myFather = new Person("John", "Doe", 50, "blue");
+    const myMother = new Person("Sally", "Rally", 48, "green");
+
+    console.log(myFather);
+    console.log(myMother);
+
+    myMother.cocinar();
+
+    class Empleado extends Person {
+
+        constructor(first, last, age, eyecolor, salary) {
+            super(first, last, age, eyecolor);
+            this.salary = salary;
+        }
+
+        sueldo() {
+            console.log(`La persona ${this.name()} tiene sueldo ${this.salary}`)
+        }
+
+    }
+
+    const empleado = new Empleado("John2", "Doe2", 50, "blue", 10000);
+    empleado.sueldo();
+
+    console.log(empleado);
+</script>
+
+</html>
