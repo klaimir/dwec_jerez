@@ -1,4 +1,3 @@
-
 class Clase {
 
     // Private
@@ -15,35 +14,31 @@ class Clase {
 
     // Deep Copy. Sólo válido para alumnos con literal object
     set alumnos(alumnos) {
-        let alumnosString = JSON.stringify(alumnos);
-        try {
-            this.#alumnos = JSON.parse(alumnosString);
-        } catch (error) {
-            throw new Error("Error al establecer los alumnos");
+        /*
+        alumnos.forEach(alumno => {
+            this.#alumnos.push(new Alumno(alumno.id, alumno.firstName, alumno.lastName, alumno.bornDate, alumno.eyeColor));
+        });
+        */
+        for (let index = 0; index < alumnos.length; index++) {
+            const alumno = alumnos[index];
+            this.#alumnos[index] = new Alumno(alumno.id, alumno.firstName, alumno.lastName, alumno.bornDate, alumno.eyeColor);
         }
     }
 
-    // Insertar un alumno comprobando que no existe tu id. En caso contrario, lanza una excepción
+    // Insertar un alumno que viene en formato literal Object comprobando que no existe tu id. En caso contrario, lanza una excepción
     insertAlumno(alumno) {
         let alumnoEncontrado = this.alumnos.find((item) => item.id === alumno.id);
         if (!alumnoEncontrado) {
-            this.alumnos.push(alumno);
+            this.alumnos.push(new Alumno(alumno.id, alumno.firstName, alumno.lastName, alumno.bornDate, alumno.eyeColor));
         } else {
             throw new Error("Existe un alumno con el mismo id");
         }
     }
 
-    // Editar un alumno comprobando que existe su id. En caso contrario, lanza una excepción
+    // Editar un alumno que viene en formato literal Object comprobando que existe su id. En caso contrario, lanza una excepción
     updateAlumno(alumno) {
         let alumnoEncontrado = this.alumnos.find((item) => item.id === alumno.id);
         if (alumnoEncontrado) {
-            // Forma manual
-            /*
-            alumnoEncontrado.firstName = alumno.firstName;
-            alumnoEncontrado.lastName = alumno.lastName;
-            alumnoEncontrado.age = alumno.ange;
-            alumnoEncontrado.eyeColor = alumno.eyeColor;
-            */
             for (const key in alumno) {
                 if (Object.hasOwnProperty.call(alumno, key)) {
                     alumnoEncontrado[key] = alumno[key];
@@ -81,11 +76,16 @@ class Clase {
 
     // Promedio con reduce
     getMediaEdad() {
-        return this.alumnos.reduce((sumEdad, item) => sumEdad + item.age, 0) / this.alumnos.length;
+        return this.alumnos.reduce((sumEdad, item) => sumEdad + item.getEdad(), 0) / this.alumnos.length;
     }
 
-    //  Ordenar de menor a mayor
+    //  Ordenar de mayor a menos
     sortByEdad() {
-        this.alumnos.sort((a, b) => a.age - b.age);
+        this.alumnos.sort((a, b) => b.getEdad() - a.getEdad());
+    }
+
+    //  Orden alfabetico
+    sortByFullName() {
+        this.alumnos.sort((a, b) => a.fullName.localeCompare(b.fullName.localeCompare()));
     }
 }

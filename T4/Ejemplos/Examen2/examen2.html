@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+
+<body>
+    <h1>Ejemplo de clases</h1>
+    <p id="demo"></p>
+</body>
+<script src="alumno.js"></script>
+<script src="clase.js"></script>
+<script>
+    const personas = [];
+    for (let index = 0; index < 5; index++) {
+        personas.push({
+            id: index,
+            firstName: "John" + index,
+            lastName: "Doe" + Math.floor(Math.random() * 10),
+            bornDate: "12-12-" + (1985 + Math.floor(Math.random() * 10)),
+            eyeColor: "blue" + index
+        });
+    }
+
+    console.log(personas);
+
+
+    const clase = new Clase(personas);
+    console.log(clase.alumnos);
+    try {
+        clase.insertAlumno(personas[0]);
+    } catch (error) {
+        console.log(error);
+    }
+
+    clase.insertAlumno({
+        id: 10,
+        firstName: "John10",
+        lastName: "Doe10",
+        bornDate: "12-12-1992",
+        eyeColor: "blue10"
+    });
+
+    console.log(clase.alumnos);
+
+    console.log(clase.alumnos[0].getEdad());
+
+    clase.updateAlumno({
+        id: 10,
+        firstName: "John11",
+        lastName: "Doe11",
+        bornDate: "12-12-1993",
+        eyeColor: "blue11"
+    });
+
+    // Obtenemos y mostramos alumno por alert
+    let alumno = clase.getAlumno(10);
+    alert(alumno);
+    console.log(alumno);
+
+    // Elimina alumno insertado
+    clase.deleteAlumno(10);
+    //clase.deleteAlumno2(0); --> Falla
+
+    // Promedio de edad
+    console.log(clase.getMediaEdad());
+
+    // Ordenación de edad
+    clase.sortByEdad();
+    console.log(clase.alumnos);
+
+    clase.sortByFullName();
+</script>
+
+</html>
