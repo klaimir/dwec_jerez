@@ -43,11 +43,13 @@
 
     console.log(alumnos);
 
+    // Proceso para hacer un copia profunda (deep copy). !!! OJO !! Sólo es válido si el array está compuesto por objetos literales o simples
     let alumnosString = JSON.stringify(alumnos)
     console.log(alumnosString);
 
+    let alumnosDeepCopy;
     try {
-        var alumnosDeepCopy = JSON.parse(alumnosString);
+        alumnosDeepCopy = JSON.parse(alumnosString);
         console.log(alumnosDeepCopy);
     } catch (error) {
         console.log("Error de parseo");
